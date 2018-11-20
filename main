@@ -1,0 +1,29 @@
+#define sensorPin1  A0
+#define sensorPin2  A1
+int sensorValue1 = 0;
+int sensorValue2 = 0;
+
+
+void setup() {
+  Serial.begin(9600);
+pinMode(sensorPin1,INPUT);
+pinMode(sensorPin2,INPUT); 
+}
+
+void loop() {
+  sensorValue1 = analogRead(sensorPin1);
+  sensorValue2 = analogRead(sensorPin2);
+
+if(sensorValue2>800)
+{
+Serial.println("On Target");
+}
+//if(sensorValue1>800)
+//{
+//Serial.println("On Target corner");
+//}
+
+  delay(1000);
+  // put your main code here, to run repeatedly:
+
+}
